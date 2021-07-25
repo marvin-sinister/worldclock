@@ -42,6 +42,12 @@ void SettingsManager::saveSettings() {
 
     // save zones to file
     settings->setValue("zones", z);
+    QMessageBox configPath;
+    configPath.setWindowTitle("Config path");
+    configPath.setText("Config created in: " + settings->fileName());
+    configPath.addButton(QMessageBox::Ok);
+    configPath.setIcon(QMessageBox::Information);
+    configPath.exec();
 }
 
 void SettingsManager::loadSettings() {

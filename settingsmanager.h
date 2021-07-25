@@ -19,6 +19,7 @@
 #define SETTINGSMANAGER_H
 
 #include <QSettings>
+#include <QMessageBox>
 
 class SettingsManager
 {
