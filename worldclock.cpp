@@ -27,6 +27,8 @@ WorldClock::WorldClock(QWidget *parent)
 
     settingsManager = new SettingsManager();
 
+    about = new About(this, "v1.0", settingsManager->getConfigPath());
+
     timer = new QTimer(this);
     time = new QDateTime();
 
@@ -44,3 +46,8 @@ WorldClock::~WorldClock()
     delete ui;
 }
 
+
+void WorldClock::on_btnAbout_clicked()
+{
+    about->show();
+}

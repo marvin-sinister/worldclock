@@ -24,6 +24,7 @@
 
 #include "zoneclock.h"
 #include "settingsmanager.h"
+#include "about.h"
 
 
 QT_BEGIN_NAMESPACE
@@ -38,6 +39,9 @@ public:
     WorldClock(QWidget *parent = nullptr);
     ~WorldClock();
 
+private slots:
+    void on_btnAbout_clicked();
+
 private:
     Ui::WorldClock *ui;
     std::vector<ZoneClock*> zoneClocks;
@@ -47,5 +51,6 @@ private:
 
     SettingsManager* settingsManager;
 
+    About* about;
 };
 #endif // WORLDCLOCK_H
