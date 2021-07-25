@@ -6,4 +6,7 @@
     <qresource prefix="/license">
         <file>LICENSE</file>
     </qresource>
+    <qresource prefix="/version">
+        <file>VERSION</file>
+    </qresource>
 </RCC>

@@ -25,19 +25,34 @@ WorldClock::WorldClock(QWidget *parent)
 {
     ui->setupUi(this);
 
+    // read version from file
+    QFile versionFile(":/version/VERSION");
+    versionFile.open(QIODevice::ReadOnly);
+    version = versionFile.readAll();
+    version.chop(1);
+    versionFile.close();
+
+    // init settings manager
     settingsManager = new SettingsManager();
 
-    about = new About(this, "v1.0", settingsManager->getConfigPath());
+    // init about window
+    about = new About(this, version, settingsManager->getConfigPath());
 
+    // put version in botom of window
+    ui->lblStatus->setText(version);
+
+    // init timer
     timer = new QTimer(this);
     time = new QDateTime();
 
+    // add zones
     for (const QByteArray &zone : settingsManager->zones) {
         zoneClocks.push_back(new ZoneClock(this, zone, time));
         connect(timer, &QTimer::timeout, zoneClocks.back(), &ZoneClock::tick);
         ui->layoutClocks->addWidget(zoneClocks.back());
     }
 
+    // start timer
     timer->start(1000);
 }
 

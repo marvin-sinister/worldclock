@@ -21,6 +21,7 @@
 #include <QWidget>
 #include <QTimer>
 #include <QDateTime>
+#include <QFile>
 
 #include "zoneclock.h"
 #include "settingsmanager.h"
@@ -52,5 +53,7 @@ private:
     SettingsManager* settingsManager;
 
     About* about;
+
+    QString version;
 };
 #endif // WORLDCLOCK_H
