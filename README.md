@@ -6,7 +6,7 @@ This is a very simple application to show time in different timezones.
 
 The zones displayed can be configured in config file located in default config location for you OS, in linux that should be:
 ```
-/home/user/.config/WorldClock/worldclocl.conf
+/home/user/.config/WorldClock/worldclock.conf
 ```
 
 Config path can also be found in `About` window within application.
