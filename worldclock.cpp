@@ -33,7 +33,7 @@ WorldClock::WorldClock(QWidget *parent)
     for (const QByteArray &zone : settingsManager->zones) {
         zoneClocks.push_back(new ZoneClock(this, zone, time));
         connect(timer, &QTimer::timeout, zoneClocks.back(), &ZoneClock::tick);
-        ui->horizontalLayout->addWidget(zoneClocks.back());
+        ui->layoutClocks->addWidget(zoneClocks.back());
     }
 
     timer->start(1000);

@@ -23,9 +23,9 @@
    <iconset resource="worldclock.qrc">
     <normaloff>:/clock.svg</normaloff>:/clock.svg</iconset>
   </property>
-  <layout class="QHBoxLayout" name="horizontalLayout">
+  <layout class="QVBoxLayout" name="verticalLayout">
    <property name="spacing">
-    <number>1</number>
+    <number>2</number>
    </property>
    <property name="leftMargin">
     <number>1</number>
@@ -39,6 +39,53 @@
    <property name="bottomMargin">
     <number>1</number>
    </property>
+   <item>
+    <layout class="QHBoxLayout" name="layoutClocks">
+     <property name="spacing">
+      <number>2</number>
+     </property>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="layoutStatus">
+     <property name="spacing">
+      <number>2</number>
+     </property>
+     <item>
+      <widget class="QLabel" name="lblStatus">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string>Status...</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnAbout">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="toolTip">
+        <string>About...</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="worldclock.qrc">
+         <normaloff>:/questionmark.svg</normaloff>:/questionmark.svg</iconset>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
   </layout>
  </widget>
  <resources>

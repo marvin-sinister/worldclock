@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/">
         <file>clock.svg</file>
+        <file>questionmark.svg</file>
     </qresource>
 </RCC>
