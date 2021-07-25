@@ -56,3 +56,7 @@ void SettingsManager::loadSettings() {
     // split zones into list
     zones = z.split(',');
 }
+
+QString SettingsManager::getConfigPath() {
+    return settings->fileName();
+}

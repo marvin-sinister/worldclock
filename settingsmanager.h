@@ -29,6 +29,8 @@ public:
 
     QList<QByteArray> zones;
 
+    QString getConfigPath();
+
 private:
     QSettings *settings;
 
