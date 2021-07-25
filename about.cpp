@@ -25,6 +25,13 @@ About::About(QWidget *parent, QString version, QString configPath) :
     ui->setupUi(this);
 
     this->ui->lblVersion->setText(version);
+
+    // read license from file
+    QFile licenseFile(":/license/LICENSE");
+    licenseFile.open(QIODevice::ReadOnly);
+    ui->txtLicense->setPlainText(licenseFile.readAll());
+    licenseFile.close();
+
     this->ui->lblConfigPath->setText(configPath);
 }
 

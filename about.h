@@ -19,6 +19,7 @@
 #define ABOUT_H
 
 #include <QDialog>
+#include <QFile>
 
 namespace Ui {
 class About;

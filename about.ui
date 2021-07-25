@@ -40,26 +40,9 @@
     </layout>
    </item>
    <item>
-    <widget class="QTextBrowser" name="txtLicense">
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
-     </property>
-     <property name="lineWrapMode">
-      <enum>QTextEdit::WidgetWidth</enum>
-     </property>
+    <widget class="QPlainTextEdit" name="txtLicense">
      <property name="readOnly">
       <bool>true</bool>
-     </property>
-     <property name="acceptRichText">
-      <bool>true</bool>
-     </property>
-     <property name="source">
-      <url>
-       <string>qrc:/license/LICENSE</string>
-      </url>
      </property>
     </widget>
    </item>
