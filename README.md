@@ -9,4 +9,6 @@ The zones displayed can be configured in config file located in default config l
 /home/user/.config/WorldClock/worldclocl.conf
 ```
 
+Config path can also be found in `About` window within application.
+
 To build simply clone, open in `QtCreator` and build.
