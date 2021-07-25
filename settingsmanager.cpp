@@ -20,7 +20,7 @@
 SettingsManager::SettingsManager()
 {
     // open settings file
-    settings = new QSettings("worldclock.conf", QSettings::IniFormat);
+    settings = new QSettings("WorldClock", "worldclock");
     // load settings from file
     loadSettings();
 }
