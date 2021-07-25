@@ -3,4 +3,7 @@
         <file>clock.svg</file>
         <file>questionmark.svg</file>
     </qresource>
+    <qresource prefix="/license">
+        <file>LICENSE</file>
+    </qresource>
 </RCC>
